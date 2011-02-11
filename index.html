@@ -5,7 +5,7 @@
   
   <script type="text/javascript">
   $(function() {
-    $('#search').liveUpdate('#items', 'li', 'a').focus();
+    $('#search').liveUpdate('#items', 'li', '.text').focus();
   });
   </script>
 
@@ -20,31 +20,37 @@
 
   <ul id="items">
     <li>
-      <a>Cauliflower</a> | <a>(This text is not searched)</a>
+      <a href="http://example.com/this/url/is/not/searched" class="text">
+        Cauliflower
+      </a> | <a>(This text is not searched)</a>
     </li>
     <li>
-      <a>Broccoli</a> | <a>(This text is not searched)</a>
+      <a href="http://example.com/this/url/is/not/searched" class="text">
+        Broccoli
+      </a> | <a>(This text is not searched)</a>
     </li>
     <li>
-      <a>Carrot</a> | <a>(This text is not searched)</a>
+      <a href="http://example.com/this/url/is/not/searched" class="text">
+        Carrot
+      </a> | <a>(This text is not searched)</a>
     </li>
     <li>
-      <a>Cucumber</a>
+      <a class="text">Cucumber</a>
     </li>
     <li>
-      <a>Potato</a>
+      <a class="text">Potato</a>
     </li>
     <li>
-      <a>Pepper</a>
+      <a class="text">Pepper</a>
     </li>
     <li>
-      <a>Tomato</a>
+      <a class="text">Tomato</a>
     </li>
     <li>
-      <a>Onion</a>
+      <a class="text">Onion</a>
     </li>
     <li>
-      <a>Squash</a>
+      <a class="text">Squash</a>
     </li>
   </ul>
 
@@ -59,7 +65,8 @@
   <p style="width: 50%">
     Note that you specify a selector indicating which element
     should be examined during the search. All other content in the 
-    matching item is ignored. So, a search for 'text' finds nothing.
+    matching item is ignored. So, a search for 'text' 
+    or 'example.com' finds nothing.
   </p>
   
 </body></html>
