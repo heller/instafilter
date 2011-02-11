@@ -1,0 +1,59 @@
+<html><body>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="quicksilver.js"></script>
+	<script type="text/javascript" src="livesearch.js"></script>
+	
+	<script type="text/javascript">
+	$(function() {
+		$('#search').liveUpdate('#items', 'li', 'a').focus();
+	});
+	</script>
+
+	<h1>Search the Garden</h1>
+
+	<form method="get" autocomplete="off">
+		<div>
+			<label for="search">Begin typing to filter the list:</label>
+			<input type="text" value="" name="search" id="search" />
+		</div> 
+	</form>
+
+	<ul id="items">
+		<li>
+      <a>Cauliflower</a>
+    </li>
+		<li>
+      <a>Broccoli</a>
+    </li>
+		<li>
+      <a>Carrot</a>
+    </li>
+		<li>
+      <a>Cucumber</a>
+    </li>
+		<li>
+      <a>Potato</a>
+    </li>
+		<li>
+      <a>Pepper</a>
+    </li>
+		<li>
+      <a>Tomato</a>
+    </li>
+		<li>
+      <a>Onion</a>
+    </li>
+		<li>
+      <a>Squash</a>
+    </li>
+	</ul>
+
+  <p style="width: 50%">
+    This is a "fuzzy search" -- you can type nonconsecutive
+    characters, and as long as those letters appear in the result
+    from left to right, it will match.
+  </p>
+  <p>
+    Try these: co, oo, clf, cc
+  </p>
+</body></html>
