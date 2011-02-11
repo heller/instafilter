@@ -1,0 +1,10 @@
+As long as your list of results isn't too big, skip the pagination and just give the user one big sortable list and a text box for instantly filtering results.
+
+Adapted from:
+
+http://ejohn.org/blog/jquery-livesearch/#postcomment
+
+http://orderedlist.com/blog/articles/live-search-with-quicksilver-style-for-jquery/
+
+TODO: 
+Turn this into a proper jQuery plugin.
