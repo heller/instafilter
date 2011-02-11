@@ -1,52 +1,52 @@
 <html><body>
-	<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="quicksilver.js"></script>
-	<script type="text/javascript" src="livesearch.js"></script>
-	
-	<script type="text/javascript">
-	$(function() {
-		$('#search').liveUpdate('#items', 'li', 'a').focus();
-	});
-	</script>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="quicksilver.js"></script>
+  <script type="text/javascript" src="livesearch.js"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    $('#search').liveUpdate('#items', 'li', 'a').focus();
+  });
+  </script>
 
-	<h1>Search the Garden</h1>
+  <h1>Search the Garden</h1>
 
-	<form method="get" autocomplete="off">
-		<div>
-			<label for="search">Begin typing to filter the list:</label>
-			<input type="text" value="" name="search" id="search" />
-		</div> 
-	</form>
+  <form method="get" autocomplete="off">
+    <div>
+      <label for="search">Begin typing to filter the list:</label>
+      <input type="text" value="" name="search" id="search" />
+    </div> 
+  </form>
 
-	<ul id="items">
-		<li>
+  <ul id="items">
+    <li>
       <a>Cauliflower</a>
     </li>
-		<li>
+    <li>
       <a>Broccoli</a>
     </li>
-		<li>
+    <li>
       <a>Carrot</a>
     </li>
-		<li>
+    <li>
       <a>Cucumber</a>
     </li>
-		<li>
+    <li>
       <a>Potato</a>
     </li>
-		<li>
+    <li>
       <a>Pepper</a>
     </li>
-		<li>
+    <li>
       <a>Tomato</a>
     </li>
-		<li>
+    <li>
       <a>Onion</a>
     </li>
-		<li>
+    <li>
       <a>Squash</a>
     </li>
-	</ul>
+  </ul>
 
   <p style="width: 50%">
     This is a "fuzzy search" -- you can type nonconsecutive
