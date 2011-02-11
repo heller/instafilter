@@ -6,9 +6,7 @@ http://ejohn.org/blog/jquery-livesearch/#postcomment
 
 http://orderedlist.com/blog/articles/live-search-with-quicksilver-style-for-jquery/
 
-TODO:
-Add parameters to the liveUpdate method which allow the user to specify the DOM path to the searched portion(s) of each item. 
-Turn this into a proper jQuery plugin.
+TODO: Turn this into a proper jQuery plugin.
 
 See Also:
 https://github.com/riklomas/quicksearch
