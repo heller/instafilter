@@ -1,14 +1,17 @@
-jQuery.fn.liveUpdate = function(list, itemSelector, contentSelector){
-	list = jQuery(list);
+(function ($) { 
+  $.fn.liveUpdate = function(list, itemSelector, contentSelector){
+
+  list = $(list);
 
 	if ( list.length ) {
 		var rows = list.children(itemSelector),
 			cache = rows.map(function(){
-				return jQuery(contentSelector, this).get(0).firstChild.nodeValue.toLowerCase();
+				return $(contentSelector, this).get(0).firstChild.nodeValue.toLowerCase();
 			});
 			
 		this
-			.keyup(filter).keyup()
+      .bind('keyup.instafilter', filter)
+      .keyup()
 			.parents('form').submit(function(){
 				return false;
 			});
@@ -17,7 +20,7 @@ jQuery.fn.liveUpdate = function(list, itemSelector, contentSelector){
 	return this;
 		
 	function filter(){
-		var term = jQuery.trim( jQuery(this).val().toLowerCase() ), scores = [];
+		var term = $.trim( $(this).val().toLowerCase() ), scores = [];
 		
 		if ( !term ) {
 			rows.show();
@@ -29,9 +32,11 @@ jQuery.fn.liveUpdate = function(list, itemSelector, contentSelector){
 				if (score > 0) { scores.push([score, i]); }
 			});
 
-			jQuery.each(scores.sort(function(a, b){return b[0] - a[0];}), function(){
-				jQuery(rows[ this[1] ]).show();
+			$.each(scores.sort(function(a, b){return b[0] - a[0];}), function(){
+				$(rows[ this[1] ]).show();
 			});
 		}
 	}
 };
+
+})(jQuery);
