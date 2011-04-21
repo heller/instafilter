@@ -1,15 +1,14 @@
 (function ($) { 
   var defaults = {
-    listSelector:     '.instafilter_list',
-    itemSelector:     '.instafilter_item',
-    contentSelector:  '.instafilter_content'
+    listSelector:     '.instafilter-list',
+    itemSelector:     '.instafilter-item',
+    contentSelector:  '.instafilter-content'
   };
 
   $.fn.liveUpdate = function(options){
   
     var settings = $.extend({}, defaults, options);
-    
-    list = $(settings.listSelector);
+    var list = $(settings.listSelector);
     rows = list.children(settings.itemSelector);
     
     cache = rows.map(function(){
