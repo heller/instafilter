@@ -1,11 +1,19 @@
 (function ($) { 
-  $.fn.liveUpdate = function(list, itemSelector, contentSelector){
-    list = $(list);
+  var defaults = {
+    listSelector:     '.instafilter_list',
+    itemSelector:     '.instafilter_item',
+    contentSelector:  '.instafilter_content'
+  };
 
-    rows = list.children(itemSelector);
+  $.fn.liveUpdate = function(options){
+  
+    var settings = $.extend({}, defaults, options);
+    
+    list = $(settings.listSelector);
+    rows = list.children(settings.itemSelector);
     
     cache = rows.map(function(){
-      return $(contentSelector, this).get(0).firstChild.nodeValue.toLowerCase();
+      return $(settings.contentSelector, this).get(0).firstChild.nodeValue.toLowerCase();
     });
 
 		this

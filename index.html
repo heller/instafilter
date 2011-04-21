@@ -5,7 +5,10 @@
   
   <script type="text/javascript">
   $(function() {
-    $('#search').liveUpdate('#items', 'li', '.text').focus();
+    $('#search').liveUpdate({
+          listSelector:     '#items',
+          itemSelector:     'li',
+          contentSelector:  '.text'}).focus();
   });
   </script>
 
