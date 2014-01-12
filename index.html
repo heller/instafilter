@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Instafilter : Live filtering jQuery plugin with fuzzy matching" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Instafilter</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/heller/instafilter">View on GitHub</a>
+
+          <h1 id="project_title">Instafilter</h1>
+          <h2 id="project_tagline">Live filtering jQuery plugin with fuzzy matching</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/heller/instafilter/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/heller/instafilter/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><strong>Instafilter</strong> is a jQuery plugin that uses fuzzy matching to filter a list of items as you type.</p>
+
+<p>It allows you to restrict the searchable text of each item, so that HTML tags, URLs, etc. don't cause false positives.</p>
+
+<p>Usage:</p>
+
+<div class="highlight highlight-javascript"><pre>    <span class="nx">$</span><span class="p">(</span><span class="s1">'#search'</span><span class="p">).</span><span class="nx">liveUpdate</span><span class="p">({</span>
+          <span class="nx">listSelector</span><span class="o">:</span>     <span class="s1">'#items'</span><span class="p">,</span>
+          <span class="nx">itemSelector</span><span class="o">:</span>     <span class="s1">'li'</span><span class="p">,</span>
+          <span class="nx">contentSelector</span><span class="o">:</span>  <span class="s1">'.text'</span><span class="p">});</span>
+</pre></div>
+
+<p><code>#search</code>: This selector should match the search box, a single text field element.</p>
+
+<p><code>listSelector</code>: An outer element to search within. By changing this, you can have several lists being searched on the same page.</p>
+
+<p><code>itemSelector</code>: The bounding element of an individual list item (not necessarily an <code>li</code> element).</p>
+
+<p><code>contentSelector</code>: The boundary of the searchable text within each item. Text not within this selector is not searched.</p>
+
+<p>Adapted from:</p>
+
+<p><a href="http://ejohn.org/blog/jquery-livesearch/#postcomment">http://ejohn.org/blog/jquery-livesearch/#postcomment</a></p>
+
+<p><a href="http://orderedlist.com/blog/articles/live-search-with-quicksilver-style-for-jquery/">http://orderedlist.com/blog/articles/live-search-with-quicksilver-style-for-jquery/</a></p>
+
+<p>See Also:
+<a href="https://github.com/riklomas/quicksearch">https://github.com/riklomas/quicksearch</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Instafilter maintained by <a href="https://github.com/heller">heller</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
