@@ -47,21 +47,6 @@
 
 <p>It allows you to restrict the searchable text of each item, so that HTML tags, URLs, etc. don't cause false positives.</p>
 
-<p>Usage:</p>
-
-<div class="highlight highlight-javascript"><pre>    <span class="nx">$</span><span class="p">(</span><span class="s1">'#search'</span><span class="p">).</span><span class="nx">liveUpdate</span><span class="p">({</span>
-          <span class="nx">listSelector</span><span class="o">:</span>     <span class="s1">'#items'</span><span class="p">,</span>
-          <span class="nx">itemSelector</span><span class="o">:</span>     <span class="s1">'li'</span><span class="p">,</span>
-          <span class="nx">contentSelector</span><span class="o">:</span>  <span class="s1">'.text'</span><span class="p">});</span>
-</pre></div>
-
-<p><code>#search</code>: This selector should match the search box, a single text field element.</p>
-
-<p><code>listSelector</code>: An outer element to search within. By changing this, you can have several lists being searched on the same page.</p>
-
-<p><code>itemSelector</code>: The bounding element of an individual list item (not necessarily an <code>li</code> element).</p>
-
-<p><code>contentSelector</code>: The boundary of the searchable text within each item. Text not within this selector is not searched.</p>
 
 <h1>Example</h1>
   <form method="get" autocomplete="off">
@@ -121,6 +106,22 @@
     matching item is ignored. So, a search for 'text'
     or 'href' or 'example.com' finds nothing.
   </p>
+
+<h1>Usage</h1>
+
+<div class="highlight highlight-javascript"><pre>    <span class="nx">$</span><span class="p">(</span><span class="s1">'#search'</span><span class="p">).</span><span class="nx">liveUpdate</span><span class="p">({</span>
+          <span class="nx">listSelector</span><span class="o">:</span>     <span class="s1">'#items'</span><span class="p">,</span>
+          <span class="nx">itemSelector</span><span class="o">:</span>     <span class="s1">'li'</span><span class="p">,</span>
+          <span class="nx">contentSelector</span><span class="o">:</span>  <span class="s1">'.text'</span><span class="p">});</span>
+</pre></div>
+
+<p><code>#search</code>: This selector should match the search box, a single text field element.</p>
+
+<p><code>listSelector</code>: An outer element to search within. By changing this, you can have several lists being searched on the same page.</p>
+
+<p><code>itemSelector</code>: The bounding element of an individual list item (not necessarily an <code>li</code> element).</p>
+
+<p><code>contentSelector</code>: The boundary of the searchable text within each item. Text not within this selector is not searched.</p>
 
 <p>Adapted from:</p>
 
