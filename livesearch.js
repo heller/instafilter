@@ -1,4 +1,4 @@
-(function ($) { 
+(function ($) {
   var defaults = {
     listSelector:     '.instafilter-list',
     itemSelector:     '.instafilter-item',
@@ -6,11 +6,11 @@
   };
 
   $.fn.liveUpdate = function(options){
-  
+
     var settings = $.extend({}, defaults, options);
     var list = $(settings.listSelector);
     rows = list.children(settings.itemSelector);
-    
+
     cache = rows.map(function(){
       return $(settings.contentSelector, this).get(0).firstChild.nodeValue.toLowerCase();
     });
@@ -27,7 +27,7 @@
 
   function filter(){
     var term = $.trim( $(this).val().toLowerCase() ), scores = [];
-    
+
     if ( !term ) {
       rows.show();
     } else {
