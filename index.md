@@ -1,16 +1,19 @@
-**Instafilter** is a jQuery plugin that uses fuzzy matching to filter a list of items as you type.
+**Instafilter** filters a list of items as you type, with fuzzy matching.
 
 It allows you to restrict the searchable text of each item, so that HTML tags, URLs, etc. don't cause false positives.
 
+**Live demo:**
+http://heller.github.io/instafilter/
+
 Usage:
 ```javascript
-	$('#search').liveUpdate({
-          listSelector:     '#items',
-          itemSelector:     'li',
-          contentSelector:  '.text'});
+window.onload = function() {
+  let searchInput = document.getElementById('search');
+  Instafilter.activate(searchInput);
+};
 ```
 
-`#search`: This selector should match the search box, a single text field element.
+Options:
 
 `listSelector`: An outer element to search within. By changing this, you can have several lists being searched on the same page.
 
@@ -18,8 +21,28 @@ Usage:
 
 `contentSelector`: The boundary of the searchable text within each item. Text not within this selector is not searched.
 
+Defaults:
+```
+listSelector:     '.instafilter-list',
+itemSelector:     '.instafilter-item',
+contentSelector:  '.instafilter-content'
+```
 
-Adapted from:
+Example 2:
+```javascript
+let options = {
+  listSelector:     '#items',
+  itemSelector:     'li',
+  contentSelector:  '.text'
+};
+window.onload = function() {
+  let searchInput = document.getElementById('search');
+  Instafilter.activate(searchInput, options);
+  document.getElementById('search').focus();
+};
+```
+
+Inspired by:
 
 http://ejohn.org/blog/jquery-livesearch/#postcomment
 
