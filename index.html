@@ -1,25 +1,24 @@
-<html><body>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script type="text/javascript" src="quicksilver.js"></script>
-  <script type="text/javascript" src="livesearch.js"></script>
-  
+<html><body onload="document.getElementById('search').focus()">
+  <script src="./instafilter.js"></script>
   <script type="text/javascript">
-  $(function() {
-    $('#search').liveUpdate({
-          listSelector:     '#items',
-          itemSelector:     'li',
-          contentSelector:  '.text'}).focus();
-  });
+    let options = {
+      listSelector:     '#items',
+      itemSelector:     'li',
+      contentSelector:  '.text'
+    };
+    window.onload = function() {
+      let searchInput = document.getElementById('search');
+      Instafilter.activate(searchInput, options);
+      document.getElementById('search').focus();
+    };
   </script>
 
   <h1>Search the Garden</h1>
 
-  <form method="get" autocomplete="off">
-    <div>
-      <label for="search">Begin typing to filter the list:</label>
-      <input type="text" value="" name="search" id="search" />
-    </div> 
-  </form>
+  <div>
+    <label for="garden-search">Begin typing to filter the list:</label>
+    <input type="text" value="" name="garden-search" id="search" />
+  </div>
 
   <ul id="items">
     <li>
