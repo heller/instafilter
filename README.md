@@ -7,10 +7,16 @@ http://heller.github.io/instafilter/
 
 Usage:
 ```javascript
-	$('#search').liveUpdate({
-          listSelector:     '#items',
-          itemSelector:     'li',
-          contentSelector:  '.text'});
+    let options = {
+      listSelector:     '#items',
+      itemSelector:     'li',
+      contentSelector:  '.text'
+    };
+    window.onload = function() {
+      let searchInput = document.getElementById('search');
+      Instafilter.activate(searchInput, options);
+      document.getElementById('search').focus();
+    };
 ```
 
 `#search`: This selector should match the search box, a single text field element.
