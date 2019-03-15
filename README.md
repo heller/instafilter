@@ -1,4 +1,4 @@
-**Instafilter** is a jQuery plugin that uses fuzzy matching to filter a list of items as you type.
+**Instafilter** filters a list of items as you type, with fuzzy matching.
 
 It allows you to restrict the searchable text of each item, so that HTML tags, URLs, etc. don't cause false positives.
 
@@ -22,7 +22,7 @@ Usage:
 `contentSelector`: The boundary of the searchable text within each item. Text not within this selector is not searched.
 
 
-Adapted from:
+Inspired by:
 
 http://ejohn.org/blog/jquery-livesearch/#postcomment
 
