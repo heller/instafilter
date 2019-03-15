@@ -2,8 +2,7 @@
 
 It allows you to restrict the searchable text of each item, so that HTML tags, URLs, etc. don't cause false positives.
 
-**Live demo:**
-http://heller.github.io/instafilter/garden.html
+[Live demo](http://heller.github.io/instafilter/garden.html)
 
 Usage:
 ```javascript
