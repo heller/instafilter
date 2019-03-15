@@ -1,0 +1,75 @@
+<html><body onload="document.getElementById('search').focus()">
+  <script src="./instafilter.js"></script>
+  <script type="text/javascript">
+    let options = {
+      listSelector:     '#items',
+      itemSelector:     'li',
+      contentSelector:  '.text'
+    };
+    window.onload = function() {
+      let searchInput = document.getElementById('search');
+      Instafilter.activate(searchInput, options);
+      document.getElementById('search').focus();
+    };
+  </script>
+
+  <h1>Search the Garden</h1>
+
+  <div>
+    <label for="garden-search">Begin typing to filter the list:</label>
+    <input type="text" value="" name="garden-search" id="search" />
+  </div>
+
+  <ul id="items">
+    <li>
+      <a href="http://example.com/this/url/is/not/searched" class="text">
+        Cauliflower
+      </a> | <a>(This text is not searched)</a>
+    </li>
+    <li>
+      <a href="http://example.com/this/url/is/not/searched" class="text">
+        Broccoli
+      </a> | <a>(This text is not searched)</a>
+    </li>
+    <li>
+      <a href="http://example.com/this/url/is/not/searched" class="text">
+        Carrot
+      </a> | <a>(This text is not searched)</a>
+    </li>
+    <li>
+      <a class="text">Cucumber</a>
+    </li>
+    <li>
+      <a class="text">Potato</a>
+    </li>
+    <li>
+      <a class="text">Pepper</a>
+    </li>
+    <li>
+      <a class="text">Tomato</a>
+    </li>
+    <li>
+      <a class="text">Onion</a>
+    </li>
+    <li>
+      <a class="text">Squash</a>
+    </li>
+  </ul>
+
+  <p style="width: 50%">
+    This is a "fuzzy search" -- you can type nonconsecutive
+    characters, and as long as those letters appear in the result
+    from left to right, it will match.
+  </p>
+  <p>
+    Try these: co, oo, clf, cc
+  </p>
+  <p style="width: 50%">
+    Note that you specify a selector indicating which element
+    should be examined during the search. All other content in the 
+    matching item is ignored. So, a search for 'text' 
+    or 'href' or 'example.com' finds nothing.
+  </p>
+  
+</body></html>
+
