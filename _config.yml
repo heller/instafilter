@@ -1,0 +1,8 @@
+title: Instafilter
+description: Live filtering jQuery plugin with fuzzy matching
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
