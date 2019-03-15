@@ -7,19 +7,13 @@ http://heller.github.io/instafilter/
 
 Usage:
 ```javascript
-    let options = {
-      listSelector:     '#items',
-      itemSelector:     'li',
-      contentSelector:  '.text'
-    };
-    window.onload = function() {
-      let searchInput = document.getElementById('search');
-      Instafilter.activate(searchInput, options);
-      document.getElementById('search').focus();
-    };
+window.onload = function() {
+  let searchInput = document.getElementById('search');
+  Instafilter.activate(searchInput);
+};
 ```
 
-`#search`: This selector should match the search box, a single text field element.
+Options:
 
 `listSelector`: An outer element to search within. By changing this, you can have several lists being searched on the same page.
 
@@ -27,6 +21,26 @@ Usage:
 
 `contentSelector`: The boundary of the searchable text within each item. Text not within this selector is not searched.
 
+Defaults:
+```
+listSelector:     '.instafilter-list',
+itemSelector:     '.instafilter-item',
+contentSelector:  '.instafilter-content'
+```
+
+Example 2:
+```javascript
+let options = {
+  listSelector:     '#items',
+  itemSelector:     'li',
+  contentSelector:  '.text'
+};
+window.onload = function() {
+  let searchInput = document.getElementById('search');
+  Instafilter.activate(searchInput, options);
+  document.getElementById('search').focus();
+};
+```
 
 Inspired by:
 
